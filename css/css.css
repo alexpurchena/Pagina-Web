@@ -1,0 +1,225 @@
+body {
+	margin:0px;
+	background: url(../img/fondo_titulo2.jpg);
+	min-width:150px;
+	
+}
+
+/* Div que contiene toda la pagina */
+#Padre {
+	position:relative;
+	margin:0px auto;
+	width:70%;
+	height: auto;
+	display: table;
+	min-width:150px;
+	background-color:#adc7cf;
+	
+}
+
+/* Div que contiene el título */
+#Titulo {
+	position:relative;
+	width:100%;
+	height:20%;
+	min-width:150px;
+	min-height:200px;
+	max-height:300px;
+	background: url(../img/fondo_titulo.jpg) no-repeat right;
+}
+
+/* Letra del titulo */
+h3 {
+	font-size: 2vw;
+}
+
+
+
+/* Contenedor donde esta escrito el título */
+#TituloPagina {
+	position:relative;
+	width:60%;
+	height:50%;
+	top:10%;
+	font-size:16;
+	text-transform: uppercase;
+	text-align:center;
+	letter-spacing: .5em;
+	letter-spacing: .5em;
+	border: 4px double rgba(255,255,255,.25);
+	border-width: 4px 0;
+	padding: 1.5em 0em;
+	margin:0px auto;
+}
+
+/* Div que contiene el menu. */
+#Menu {
+	position:relative;
+	width:100%;
+	height:50px;
+	min-width:250px;
+	min-height:50px;
+	max-height:300px;
+	background-color:#4E94AB;
+	color: #fff;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+/* Los estilos que se dan a todo lo que haya dentro de Menu */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+/* Icono de menu */
+#btn-menu {
+	display: none;
+}
+
+#Menu label {
+	font-size: 30px;
+	cursor: pointer;
+	display: none;
+}
+
+/* Estilos a los contenedores del menu: ul, li, a y span */
+.menu ul {
+	background: #4E94AB;
+	display: flex;
+	list-style: none;
+}
+
+.menu ul ul {
+	display: none;
+}
+
+.menu a {
+	display: block;
+	padding: 15px 20px;
+	color: #fff;
+	text-decoration: none;
+}
+
+.menu a:hover {
+	background: rgba(0,0,0,0.3);
+}
+
+.menu a span {
+	margin-left: 10px;
+}
+
+.menu ul li:hover ul {
+	display: block;
+	position: absolute;
+}
+
+/* Esto es lo que hace la pagina web la resolcuión de pantalla llega a la que le hemos marcado */
+@media (max-width:768px) {
+	#Menu label {
+		display: block;
+	}
+	
+	.menu {
+		position:absolute;
+		top: 50px;
+		left: 0px;
+		width: 100%;
+		transform: translateX(-200%);
+		transition: all 0.3s;
+	}
+	
+	.menu ul {
+		display: block;
+		background: #555;
+	}
+	
+	.menu ul li:hover ul {
+		display: none;
+		position: static;
+	}
+	
+	.menu a span {
+		position: absolute;
+		right: 5px;
+		
+	}
+	
+	#btn-menu:checked ~ .menu {
+		transform: translateX(0%);
+	}
+	
+	.menu ul ul {
+		background: rgba(0,0,0,0.4);
+	}
+	
+	.menu ul ul a {
+		padding: 15px 40px;
+	}
+}
+
+/* Contenedor*/
+#Contenedor {
+	text-align: center;
+	padding-top: 20px;
+}
+
+#Telefono {
+	width: 450px;
+	max-width: 100%;
+	height: auto;
+	padding-top: 15px;
+	padding-bottom: 40px;
+}
+
+#Ordenador {
+	width: 900px;
+	max-width: 100%;
+	height: auto;
+	padding-top: 15px;
+	padding-bottom: 40px;
+}
+
+h1 {
+	text-align: center;
+	padding-top: 20px;
+}
+
+/* Pie de Pagina*/
+.piedepagina {
+	padding: 20px;
+	height: auto;
+}
+
+footer {
+	background-color:#1E7D7A;
+	color: #fff;
+	width: 70%;
+	height: 180px;
+	margin:0px auto;
+	padding: 15px;
+	
+}
+
+#Direccion {
+	float: left;
+}
+
+#Contacto {
+	float: right;
+	padding-top: 10px;
+	
+}
+
+a {
+	text-decoration: none;
+}
+
+
+
+
+
+
