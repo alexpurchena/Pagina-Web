@@ -1,0 +1,177 @@
+<html>
+	<head>
+		<!-- Titulo -->
+		<title>Conexión por SSH a un PC utilizando dispositivos móviles con Android</title>
+
+		<!-- Metas de contenido -->
+		<meta name="language" content="Spanish"/>
+		<meta charset="UTF-8" http-equiv="content-type" content="text/html"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<!-- Archivo CSS -->
+		<link rel="stylesheet" type="text/css" href="css/css.css"/>
+		<link rel="stylesheet" type="text/css" href="css/fontello.css"/>
+		
+		<!-- Icono Página -->
+		<link rel="shortcut icon" href="img/logo.ico"/>
+		
+		<!-- script -->
+		<script src="http://code.jquery.com/jquery-1.11.3.min.js"> </script>
+	</head>
+	<body>
+		<!-- Div Padre-->
+		<div id="Padre">
+			<!-- Div Titulo-->
+			<div id="Titulo">
+				<div id="TituloPagina">
+					<h3>Conexión por SSH a un PC utilizando dispositivos móviles con Android</h3>
+				</div>
+			</div>	
+			
+			<!-- Menu -->
+			<div id="Menu">
+				<!-- IconoMenu -->
+				<input type="checkbox" id="btn-menu">
+				<label id="BotonMenu" for="btn-menu"><img src="img/icono-menu.jpg"> </label>
+				<nav class="menu">
+					<ul id="MenuDesplegable">
+						<li><a href="index.html"> Inicio </a></li>
+						
+						<li class="submenu"><a href="index.html"> Instalación AirDroid<span class="icon-down-open"> </span></a>
+							<ul>
+								<li><a href="#InstalaciónAirDroid "> Instalación AirDroid </a></li>
+								<li><a href="#ControlarTLF"> Controlar nuestro teléfono con AirDroid</a></li>
+							</ul>
+						</li>
+						
+						<li class="submenu"><a href="SSHServer.html"> SSH Server <span class="icon-down-open"> </span></a>
+							<ul>
+								<li><a href="#InstalaciónSSHServer"> Instalación SSH Server </a></li>
+								<li><a href="#AñadirUsuario"> Añadir usuario y entrar desde Windows</a></li>
+								<li><a href="#CrearCarpeta"> Crear carpeta en SSH Server</a></li>
+							</ul>
+						</li>
+						
+						<li class="submenu"><a href="Juice-SSH Client.html"> Juice-SSH Client <span class="icon-down-open"> </span></a>
+							<ul>
+								<li><a href="#InstalaciónJuice">Instalación y ajustes iniciales </a></li>
+								<li><a href="#CrearCarpetaJuice"> Crear carpeta desde Ubuntu</a></li>
+							</ul>
+						</li>
+						
+						<li class="submenu"><a href="SSH Ubuntu-Android.html"> SSH Ubuntu-Android <span class="icon-down-open"> </span></a>
+							<ul>
+								<li><a href="#CrearCarpetaUbuntu"> Crear una carpeta desde Ubuntu</a></li>
+		
+							</ul>
+						</li>
+						
+						<li class="submenu"><a href="Sftp Ubuntu-Android.html"> Sftp Ubuntu-Android <span class="icon-down-open"> </span></a>
+							<ul>
+								<li><a href="#CrearArchivoUbuntu"> Crear un archivo en Ubuntu y copiarlo al móvil (comando put ) </a></li>
+								<li><a href="#CogerArchivoMovil">Coger un archivo del móvil y pasarlo al ordenador con Ubuntu (comando get)  </a></li>
+							</ul>
+						</li>
+						
+						<li class="submenu"><a href="SFTP Grafico.html"> SFTP gráfico <span class="icon-down-open"> </span></a>
+							<ul>
+								<li><a href="#"> poner un archivo desde el cliente SFTP Android hasta Ubuntu y también copiar un archivo desde Ubuntu hasta Android.</a></li>
+		
+							</ul>
+						</li>
+					
+					</ul>
+				</nav>
+				
+				<!-- script -->
+				<script src="menu.js"></script>
+			</div>
+			
+			<!-- Contenido Pagina -->
+			<h1>SSH SERVER</h1>
+			<p id="Contenedor">
+				<a name="InstalaciónSSHServer">Lo </a>primero que tenemos que hacer es buscar ssh server en el buscador de la Play Store y 
+				hacer clic sobre la primera opción que nos aparece </br> <img  id="Telefono" src="img/Fotos SSH Server/1.jpg " > </br>
+				Cuando hagamos clic sobre ella tenemos que darle a Instalar </br> <img  id="Telefono" src="img/Fotos SSH Server/2.jpg " > </br>
+				Y esperamos a que termine la descarga </br> <img  id="Telefono" src="img/Fotos SSH Server/3.jpg " > </br>
+				Cuando termine la instalación tenemos que darle a Abrir </br> <img  id="Telefono" src="img/Fotos SSH Server/4.jpg " > </br>
+				Le damos a permitir y continuamos </br> <img  id="Telefono" src="img/Fotos SSH Server/5.jpg " > </br>
+				Y ya tendríamos ssh server listo para usar en nuestro teléfono  </br> <img  id="Telefono" src="img/Fotos SSH Server/6.jpg " > </br> </br></br>
+			</p>
+			
+			<h1><a name="AñadirUsuario">Añadir usuario y entrar desde Windows</a></h1>
+			<p id="Contenedor">
+				Dentro de ssh server, para añadir un usuario tenemos que irnos a la parte de debajo de la pantalla y pulsar sobre la pestaña Users
+				</br> <img  id="Telefono" src="img/Fotos SSH Server/6.1.jpg " > </br>
+				Dentro de la pestaña Users tenemos que pulsar sobre el icono que aparece una persona con un + abajo a la derecha de la pantalla
+				</br> <img  id="Telefono" src="img/Fotos SSH Server/7.jpg " > </br>
+				Le ponemos su nombre completo, el nombre de usuario y la contraseña después tenemos 
+				que pulsar sobre Add new para añadir a los lugares del teléfono donde los clientes van a poder acceder
+				</br> <img  id="Telefono" src="img/Fotos SSH Server/8.jpg " > </br>
+				Seleccionamos la tarjeta SD, por ejemplo, pero podemos seleccionar nuestro teléfono también </br> <img  id="Telefono" src="img/Fotos SSH Server/8.1.jpg " > </br>
+				Seleccionamos la tarjeta SD en general y le damos a seleccionar </br> <img  id="Telefono" src="img/Fotos SSH Server/8.2.jpg " > </br>
+				Después de añadir la tarjeta SD también añadí el almacenamiento de mi teléfono.</br>
+				Cuando añadamos las carpetas a las que van a poder acceder tenemos que marcar la casilla Writable para que 
+				cuando accedan los usuarios a esas carpetas puedan crear y modificar las carpetas  </br> <img  id="Telefono" src="img/Fotos SSH Server/8.3.jpg " > </br>
+				Después de eso tenemos que activar la pestaña que está a la izquierda del nombre de usuario para habilitar al usuario
+				</br> <img  id="Telefono" src="img/Fotos SSH Server/9.jpg " > </br>
+				Cuando habilitemos al usuario podemos volver a la página principal y darle a start para iniciar el servicio ssh
+				</br> <img  id="Telefono" src="img/Fotos SSH Server/10.jpg " > </br>
+				Cuando le demos a iniciar nos saldrá la dirección Ip de nuestro teléfono y el puerto que está usando </br> <img  id="Telefono" src="img/Fotos SSH Server/11.jpg " > </br>
+				Cuando terminemos de instalar ssh en el teléfono tenemos que irnos al ordenador y nos descargamos algo para conectar por ssh por ejemplo puTTy,
+				nos vamos a su página oficial y hacemos clic “Aquí” para descargar el instalador
+				</br> <img  id="Ordenador" src="img/Fotos SSH Server/16.png " > </br>
+				Y elegimos el instalador que vamos a usar de 32 o 64 bits según nuestro procesador, yo voy a elegir el de 64 bits
+				</br> <img  id="Ordenador" src="img/Fotos SSH Server/17.png " > </br>
+				Una vez descargado hacemos doble clic sobre el para ejecutarlo </br> <img  id="Ordenador" src="img/Fotos SSH Server/18.png " > </br>
+				Cuando se inicie en la primera pantalla solo tenemos que darle a Next </br> <img  id="Ordenador" src="img/Fotos SSH Server/19.png " > </br>
+				Elegimos donde queremos instalarlo y le damos a Next </br> <img  id="Ordenador" src="img/Fotos SSH Server/20.png " > </br>
+				Aquí dejamos todo como esta y le damos a Install </br> <img  id="Ordenador" src="img/Fotos SSH Server/21.png " > </br>
+				Y por último solo tenemos que darle a Finish para terminar la instalación e iniciar puTTy </br> <img  id="Ordenador" src="img/Fotos SSH Server/22.png " > </br>
+				Cuando se inicie puTTy, en el apartado Host Name tenemos que poner la dirección IP que nos ha dado antes ssh server cuando lo hemos iniciado y justo al lado 
+				tenemos que poner el puerto que nos indicaba y le damos a Open para iniciar la conexión
+				</br> <img  id="Ordenador" src="img/Fotos SSH Server/23.png " > </br>
+				Cuando se abra la terminar de puTTy lo primero que tenemos que hacer es poner el nombre de usuario del usuario que hemos creado anteriormente y 
+				después nos pedirá la contraseña del usuario
+				</br> <img  id="Ordenador" src="img/Fotos SSH Server/24.png " > </br>
+				Después de poner el usuario y la contraseña ya estaríamos conectados con el teléfono por ssh
+				</br> <img  id="Ordenador" src="img/Fotos SSH Server/25.png " > </br>
+				Si hacemos un ls en la terminal de puTTy podemos ver todas las carpetas de nuestro teléfono así podemos comprobar que nos hemos conectado correctamente
+				</br> <img  id="Ordenador" src="img/Fotos SSH Server/26.png " > </br></br> </br>
+			</p>
+			
+			<h1><a name="CrearCarpeta">Crear carpeta en SSH Server</h1>
+			<p id="Contenedor">
+				Para poder crear una carpeta desde puTTy tenemos que acceder a unas de las rutas que nos ha dado la aplicación ssh server cuando le hemos añadido la tarjeta sd
+				y el almacemaniento interno de nuestro teléfono, porque si accedemos a otra ruta que no sea esa nos dirá que no tenemos permisos de escritura sobre ella
+				</br> <img  id="Ordenador" src="img/Fotos SSH Server/27.png " > </br>
+				Hacemos un ls y comprobamos que hemos accedido al almacenamiento interno del teléfono 
+				</br> <img  id="Ordenador" src="img/Fotos SSH Server/28.png " > </br>
+				Cuando comprobemos que estamos en la ruta correcta podemos usar el comando mkdir para crear la carpeta que nos pide
+				</br> <img  id="Ordenador" src="img/Fotos SSH Server/29.png " > </br>
+				Si volvemos hacer un ls después de ejecutar el comando mkdir comprobamos que nos aparece la nueva carpeta
+				</br> <img  id="Ordenador" src="img/Fotos SSH Server/30.png " > </br> </br> <img  id="Ordenador" src="img/Fotos SSH Server/31.png " > </br>
+				Si nos vamos a la aplicación AirDroid o a los archivos de nuestro teléfono podemos comprobar que sea creado correctamente la carpeta 
+				</br> <img  id="Ordenador" src="img/Fotos SSH Server/32.png " > </br> </br> <img  id="Telefono" src="img/Fotos SSH Server/33.jpg " > </br>
+			</p>
+		</div>
+		<!-- Pie de página -->
+		<footer >
+			<div id="piedepagina">
+				<p id="Direccion">
+					Centro de Formación I.E.S. Rosa Navarro</br>
+					Avenida de Portugal s/n</br>
+					Olula del Río (Almería)</br>
+				</p>
+				
+				<p id="Contacto">
+					<b>Teléfono:</b> 950 63 96 05</br>
+					<b>Fax:</b> 950 63 95 32</br>
+					<b>Web:</b> <a href="www.iesrosanavarro.es"> www.iesrosanavarro.es</a></br>
+					<b>Correo electrónico:</b> <a href="mailto:04003457.edu@juntadeandalucia.es">04003457.edu@juntadeandalucia.es</a>
+				</p>
+				
+			</div>
+		</footer>
+	</body>
+</html>

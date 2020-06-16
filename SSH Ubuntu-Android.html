@@ -1,0 +1,131 @@
+<html>
+	<head>
+		<!-- Titulo -->
+		<title>Conexión por SSH a un PC utilizando dispositivos móviles con Android</title>
+
+		<!-- Metas de contenido -->
+		<meta name="language" content="Spanish"/>
+		<meta charset="UTF-8" http-equiv="content-type" content="text/html"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<!-- Archivo CSS -->
+		<link rel="stylesheet" type="text/css" href="css/css.css"/>
+		<link rel="stylesheet" type="text/css" href="css/fontello.css"/>
+		
+		<!-- Icono Página -->
+		<link rel="shortcut icon" href="img/logo.ico"/>
+		
+		<!-- script -->
+		<script src="http://code.jquery.com/jquery-1.11.3.min.js"> </script>
+	</head>
+	<body>
+		<!-- Div Padre-->
+		<div id="Padre">
+			<!-- Div Titulo-->
+			<div id="Titulo">
+				<div id="TituloPagina">
+					<h3>Conexión por SSH a un PC utilizando dispositivos móviles con Android</h3>
+				</div>
+			</div>	
+			
+			<!-- Menu -->
+			<div id="Menu">
+				<!-- IconoMenu -->
+				<input type="checkbox" id="btn-menu">
+				<label id="BotonMenu" for="btn-menu"><img src="img/icono-menu.jpg"> </label>
+				<nav class="menu">
+					<ul id="MenuDesplegable">
+						<li><a href="#"> Inicio </a></li>
+						
+						<li class="submenu"><a href="index.html"> Instalación AirDroid<span class="icon-down-open"> </span></a>
+							<ul>
+								<li><a href="#InstalaciónAirDroid "> Instalación AirDroid </a></li>
+								<li><a href="#ControlarTLF"> Controlar nuestro teléfono con AirDroid</a></li>
+							</ul>
+						</li>
+						
+						<li class="submenu"><a href="SSHServer.html"> SSH Server <span class="icon-down-open"> </span></a>
+							<ul>
+								<li><a href="#InstalaciónSSHServer"> Instalación SSH Server </a></li>
+								<li><a href="#AñadirUsuario"> Añadir usuario y entrar desde Windows</a></li>
+								<li><a href="#CrearCarpeta"> Crear carpeta en SSH Server</a></li>
+							</ul>
+						</li>
+						
+						<li class="submenu"><a href="Juice-SSH Client.html"> Juice-SSH Client <span class="icon-down-open"> </span></a>
+							<ul>
+								<li><a href="#InstalaciónJuice">Instalación y ajustes iniciales </a></li>
+								<li><a href="#CrearCarpetaJuice"> Crear carpeta desde Ubuntu</a></li>
+							</ul>
+						</li>
+						
+						<li class="submenu"><a href="SSH Ubuntu-Android.html"> SSH Ubuntu-Android <span class="icon-down-open"> </span></a>
+							<ul>
+								<li><a href="#CrearCarpetaUbuntu"> Crear una carpeta desde Ubuntu</a></li>
+		
+							</ul>
+						</li>
+						
+						<li class="submenu"><a href="Sftp Ubuntu-Android.html"> Sftp Ubuntu-Android <span class="icon-down-open"> </span></a>
+							<ul>
+								<li><a href="#CrearArchivoUbuntu"> Crear un archivo en Ubuntu y copiarlo al móvil (comando put ) </a></li>
+								<li><a href="#CogerArchivoMovil">Coger un archivo del móvil y pasarlo al ordenador con Ubuntu (comando get)  </a></li>
+							</ul>
+						</li>
+						
+						<li class="submenu"><a href="SFTP Grafico.html"> SFTP gráfico <span class="icon-down-open"> </span></a>
+							<ul>
+								<li><a href="#"> poner un archivo desde el cliente SFTP Android hasta Ubuntu y también copiar un archivo desde Ubuntu hasta Android.</a></li>
+		
+							</ul>
+						</li>
+					
+					</ul>
+				</nav>
+				
+				<!-- script -->
+				<script src="menu.js"></script>
+			</div>
+			
+			<!-- Contenido Pagina -->
+			<h1>SSH Ubuntu-Android</h1>
+			<p id="Contenedor">
+				<a name="InstalaciónAirDroid">Lo </a> primero que tenemos que hacer es abrir la aplicación ssh server en nuestro teléfono e irnos a la pestaña Users
+				</br> <img  id="Telefono" src="img/Fotos ssh Ubuntu-Android/1.jpg " > </br>
+				En la pestaña Users le damos al icono del muñeco para añadir un nuevo usuario </br> <img  id="Telefono" src="img/Fotos ssh Ubuntu-Android/2.jpg " > </br>
+				Le ponemos nombre, nombre de usuario y contraseña y después pulsamos sobre Add new </br> <img  id="Telefono" src="img/Fotos ssh Ubuntu-Android/3.jpg " > </br>
+				Nos vamos a una carpeta del móvil y la seleccionamos para que el usuario que se conecte solo pueda tener permisos de escrituras sobre esa carpeta, 
+				después de seleccionar la carpeta le damos a seleccionar </br> <img  id="Telefono" src="img/Fotos ssh Ubuntu-Android/4.jpg " > </br>
+				Cuando creemos el usuario en el servidor tenemos que irnos al cliente y poner “ssh –p 222 alexubuntu@192.168.0.100” para conectarse con el servidor,
+				cuando le demos enter tendremos que confirmarle si queremos continuar con la conexión le decimos que sí y por ultimo escribimos la contraseña 
+				</br> <img  id="Ordenador" src="img/Fotos ssh Ubuntu-Android/5.png " > </br>
+				Y ya estaríamos conectados con nuestro teléfono  </br> <img  id="Ordenador" src="img/Fotos ssh Ubuntu-Android/6.png " > </br>
+				También podemos irnos al servidor y comprobar que estamos conectados </br> <img  id="Telefono" src="img/Fotos ssh Ubuntu-Android/7.jpg " > </br>
+				<a name="CrearCarpetaUbuntu">Una </a>vez dentro del servidor tenemos que acceder a una de las rutas que hemos añadido cuando hemos creado en el usuario /storage/emulated/0/ 
+				y ya dentro de la carpeta donde tenemos permisos de escritura podemos crear la carpeta desdeubuntu con el comando mkdir
+				</br> <img  id="Ordenador" src="img/Fotos ssh Ubuntu-Android/8.png " > </br>
+				Si hacemos un ls podemos comprobar si se ha creado correctamente la carpeta  </br> <img  id="Ordenador" src="img/Fotos ssh Ubuntu-Android/9.png " > </br>
+				
+			</p>
+			
+		</div>
+		<!-- Pie de página -->
+		<footer >
+			<div id="piedepagina">
+				<p id="Direccion">
+					Centro de Formación I.E.S. Rosa Navarro</br>
+					Avenida de Portugal s/n</br>
+					Olula del Río (Almería)</br>
+				</p>
+				
+				<p id="Contacto">
+					<b>Teléfono:</b> 950 63 96 05</br>
+					<b>Fax:</b> 950 63 95 32</br>
+					<b>Web:</b> <a href="www.iesrosanavarro.es"> www.iesrosanavarro.es</a></br>
+					<b>Correo electrónico:</b> <a href="mailto:04003457.edu@juntadeandalucia.es">04003457.edu@juntadeandalucia.es</a>
+				</p>
+				
+			</div>
+		</footer>
+	</body>
+</html>

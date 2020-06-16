@@ -1,0 +1,162 @@
+<html>
+	<head>
+		<!-- Titulo -->
+		<title>Conexión por SSH a un PC utilizando dispositivos móviles con Android</title>
+
+		<!-- Metas de contenido -->
+		<meta name="language" content="Spanish"/>
+		<meta charset="UTF-8" http-equiv="content-type" content="text/html"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<!-- Archivo CSS -->
+		<link rel="stylesheet" type="text/css" href="css/css.css"/>
+		<link rel="stylesheet" type="text/css" href="css/fontello.css"/>
+		
+		<!-- Icono Página -->
+		<link rel="shortcut icon" href="img/logo.ico"/>
+		
+		<!-- script -->
+		<script src="http://code.jquery.com/jquery-1.11.3.min.js"> </script>
+	</head>
+	<body>
+		<!-- Div Padre-->
+		<div id="Padre">
+			<!-- Div Titulo-->
+			<div id="Titulo">
+				<div id="TituloPagina">
+					<h3>Conexión por SSH a un PC utilizando dispositivos móviles con Android</h3>
+				</div>
+			</div>	
+			
+			<!-- Menu -->
+			<div id="Menu">
+				<!-- IconoMenu -->
+				<input type="checkbox" id="btn-menu">
+				<label id="BotonMenu" for="btn-menu"><img src="img/icono-menu.jpg"> </label>
+				<nav class="menu">
+					<ul id="MenuDesplegable">
+						<li><a href="#"> Inicio </a></li>
+						
+						<li class="submenu"><a href="index.html"> Instalación AirDroid<span class="icon-down-open"> </span></a>
+							<ul>
+								<li><a href="#InstalaciónAirDroid "> Instalación AirDroid </a></li>
+								<li><a href="#ControlarTLF"> Controlar nuestro teléfono con AirDroid</a></li>
+							</ul>
+						</li>
+						
+						<li class="submenu"><a href="SSHServer.html"> SSH Server <span class="icon-down-open"> </span></a>
+							<ul>
+								<li><a href="#InstalaciónSSHServer"> Instalación SSH Server </a></li>
+								<li><a href="#AñadirUsuario"> Añadir usuario y entrar desde Windows</a></li>
+								<li><a href="#CrearCarpeta"> Crear carpeta en SSH Server</a></li>
+							</ul>
+						</li>
+						
+						<li class="submenu"><a href="Juice-SSH Client.html"> Juice-SSH Client <span class="icon-down-open"> </span></a>
+							<ul>
+								<li><a href="#InstalaciónJuice">Instalación y ajustes iniciales </a></li>
+								<li><a href="#CrearCarpetaJuice"> Crear carpeta desde Android</a></li>
+							</ul>
+						</li>
+						
+						<li class="submenu"><a href="SSH Ubuntu-Android.html"> SSH Ubuntu-Android <span class="icon-down-open"> </span></a>
+							<ul>
+								<li><a href="#CrearCarpetaUbuntu"> Crear una carpeta desde Ubuntu</a></li>
+		
+							</ul>
+						</li>
+						
+						<li class="submenu"><a href="Sftp Ubuntu-Android.html"> Sftp Ubuntu-Android <span class="icon-down-open"> </span></a>
+							<ul>
+								<li><a href="#CrearArchivoUbuntu"> Crear un archivo en Ubuntu y copiarlo al móvil (comando put ) </a></li>
+								<li><a href="#CogerArchivoMovil">Coger un archivo del móvil y pasarlo al ordenador con Ubuntu (comando get)  </a></li>
+							</ul>
+						</li>
+						
+						<li class="submenu"><a href="SFTP Grafico.html"> SFTP gráfico <span class="icon-down-open"> </span></a>
+							<ul>
+								<li><a href="#"> poner un archivo desde el cliente SFTP Android hasta Ubuntu y también copiar un archivo desde Ubuntu hasta Android.</a></li>
+		
+							</ul>
+						</li>
+					
+					</ul>
+				</nav>
+				
+				<!-- script -->
+				<script src="menu.js"></script>
+			</div>
+			
+			<!-- Contenido Pagina -->
+			<h1>Instalación y ajustes iniciales </br> Juice-SSH Client</h1>
+			<p id="Contenedor">
+				<a name="InstalaciónJuice">Lo </a> primero que tenemos que hacer es irnos a la play store y buscar Juice-SSH Client, 
+				después de eso hacemos clic sobre la primera opción que nos aparece </br> <img  id="Telefono" src="img/Fotos Juice-SSH Client/1.jpg " > </br>
+				Cuando la seleccionemos tenemos que darle a Instalar </br> <img  id="Telefono" src="img/Fotos Juice-SSH Client/2.jpg " > </br>
+				Y esperamos a que termine la descarga </br> <img  id="Telefono" src="img/Fotos Juice-SSH Client/3.jpg " > </br>
+				Cuando termine de descargar e instalar tenemos que darle a Abrir </br> <img  id="Telefono" src="img/Fotos Juice-SSH Client/4.jpg " > </br>
+				Y ya estará listo para usar, pero antes tenemos que instalar ssh en el ordenador </br> <img  id="Telefono" src="img/Fotos Juice-SSH Client/5.jpg " > </br>
+				Después de instalar Juice-SSH Client en el teléfono tenemos que irnos al ordenador y abrir el terminal
+				</br> <img  id="Ordenador" src="img/Fotos Juice-SSH Client/6.png " > </br>
+				Y escribimos el comando que aparece en la pantalla para instalar ssh en Ubuntu  </br> <img  id="Ordenador" src="img/Fotos Juice-SSH Client/7.png " > </br>
+				Escribimos la contraseña y empezara la instalación </br> <img  id="Ordenador" src="img/Fotos Juice-SSH Client/8.png " > </br>
+				Esperamos a que termine la instalación </br> <img  id="Ordenador" src="img/Fotos Juice-SSH Client/9.png " > </br>
+				Después de instalar ssh vamos a instalar nmap que sirve para ver si los puertos de ssh funcionan correctamente
+				</br> <img  id="Ordenador" src="img/Fotos Juice-SSH Client/10.png " > </br>
+				Nos pedirá que confirmemos si queremos continuar, le decimos que sí y le damos a enter </br> <img  id="Ordenador" src="img/Fotos Juice-SSH Client/11.png " > </br>
+				Para usar nmap después de instalarlo tenemos que escribir nmap y la dirección 127.0.0.1 que es la ip que representa a la máquina que estamos usando
+				</br> <img  id="Ordenador" src="img/Fotos Juice-SSH Client/12.png " > </br>
+				Si le damos a enter nos aparecerá todos los puertos que se están usando y que servicio lo está usando, si nos fijamos ssh está usando el puerto 22
+				</br> <img  id="Ordenador" src="img/Fotos Juice-SSH Client/13.png " > </br>
+				Después de comprobar los puertos tenemos que saber la ip que tenemos para poder conectarnos 
+				</br> <img  id="Ordenador" src="img/Fotos Juice-SSH Client/14.png " > </br>
+				Después de preparar ssh en el ordenador tenemos que volver al teléfono y hacer clic sobre Manage Connections para añadir un usuario
+				</br> <img  id="Telefono" src="img/Fotos Juice-SSH Client/16.jpg " > </br>
+				En Conexiones aparece vacía porque nunca hemos usado esta aplicación, para añadir un usuario tenemos que darle al icono +
+				</br> <img  id="Telefono" src="img/Fotos Juice-SSH Client/17.jpg " > </br>
+				Le ponemos un nombre se usuario y le damos al tic para confirmar </br> <img  id="Telefono" src="img/Fotos Juice-SSH Client/18.jpg " > </br>
+				En alias ponemos el nombre que vamos a usar, el tipo de dirección ssh y la identidad tenemos que elegir la que acabamos de crear ahora “Alejandro”
+				</br> <img  id="Telefono" src="img/Fotos Juice-SSH Client/19.jpg " > </br>
+				Y por último tenemos que añadir la dirección IP de nuestro servidor, cuando la añadamos le damos al tic para guardar
+				</br> <img  id="Telefono" src="img/Fotos Juice-SSH Client/20.jpg " > </br>
+				Cuando añadamos el usuario nos aparecerá en conexiones, para empezar la conexión tenemos que hacer clic sobre el
+				</br> <img  id="Telefono" src="img/Fotos Juice-SSH Client/21.jpg " > </br>
+				Antes de empezar la conexión con el servidor nos pedirá una verificación por ser la primera vez que nos conectamos.</br>
+				Le damos a aceptar </br> <img  id="Telefono" src="img/Fotos Juice-SSH Client/22.jpg " > </br>
+				Escribimos la contraseña de nuestro servidor y le damos a aceptar  </br> <img  id="Telefono" src="img/Fotos Juice-SSH Client/23.jpg " > </br>
+				Esperamos a que termine la conexión </br> <img  id="Telefono" src="img/Fotos Juice-SSH Client/24.jpg " > </br>
+				Y ya estaríamos conectados con nuestro equipo Ubuntu mediando ssh </br> <img  id="Telefono" src="img/Fotos Juice-SSH Client/25.jpg " > </br> </br> </br>
+			</p>
+			
+			<h1><a name="CrearCarpetaJuice"> Crear carpeta Desde Android</a></h1>
+			<p id="Contenedor">
+				Una vez dentro del servidor hacemos un ls para ver donde estamos ubicados y donde queremos crear la carpeta 
+				</br> <img  id="Telefono" src="img/Fotos Juice-SSH Client/26.jpg " > </br>
+				Entramos en Desktop con cd para crear la carpeta </br> <img  id="Telefono" src="img/Fotos Juice-SSH Client/27.jpg " > </br>
+				Dentro del escritorio usamos el comando Mkdir para crear la carpeta que nos pide en el ejercicio
+				</br> <img  id="Telefono" src="img/Fotos Juice-SSH Client/28.jpg " > </br>
+				Para comprobar que se ha creado correctamente la carpeta podemos usar ls </br> <img  id="Telefono" src="img/Fotos Juice-SSH Client/29.jpg " > </br>
+				También podemos irnos al servidor y mirar en el escritorio a ver si se ha creado la carpeta </br> <img  id="Ordenador" src="img/Fotos Juice-SSH Client/30.png " > </br>
+			</p>
+			
+		</div>
+		<!-- Pie de página -->
+		<footer >
+			<div id="piedepagina">
+				<p id="Direccion">
+					Centro de Formación I.E.S. Rosa Navarro</br>
+					Avenida de Portugal s/n</br>
+					Olula del Río (Almería)</br>
+				</p>
+				
+				<p id="Contacto">
+					<b>Teléfono:</b> 950 63 96 05</br>
+					<b>Fax:</b> 950 63 95 32</br>
+					<b>Web:</b> <a href="www.iesrosanavarro.es"> www.iesrosanavarro.es</a></br>
+					<b>Correo electrónico:</b> <a href="mailto:04003457.edu@juntadeandalucia.es">04003457.edu@juntadeandalucia.es</a>
+				</p>
+				
+			</div>
+		</footer>
+	</body>
+</html>

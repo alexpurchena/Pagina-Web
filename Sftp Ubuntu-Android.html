@@ -1,0 +1,142 @@
+<html>
+	<head>
+		<!-- Titulo -->
+		<title>Conexión por SSH a un PC utilizando dispositivos móviles con Android</title>
+
+		<!-- Metas de contenido -->
+		<meta name="language" content="Spanish"/>
+		<meta charset="UTF-8" http-equiv="content-type" content="text/html"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<!-- Archivo CSS -->
+		<link rel="stylesheet" type="text/css" href="css/css.css"/>
+		<link rel="stylesheet" type="text/css" href="css/fontello.css"/>
+		
+		<!-- Icono Página -->
+		<link rel="shortcut icon" href="img/logo.ico"/>
+		
+		<!-- script -->
+		<script src="http://code.jquery.com/jquery-1.11.3.min.js"> </script>
+	</head>
+	<body>
+		<!-- Div Padre-->
+		<div id="Padre">
+			<!-- Div Titulo-->
+			<div id="Titulo">
+				<div id="TituloPagina">
+					<h3>Conexión por SSH a un PC utilizando dispositivos móviles con Android</h3>
+				</div>
+			</div>	
+			
+			<!-- Menu -->
+			<div id="Menu">
+				<!-- IconoMenu -->
+				<input type="checkbox" id="btn-menu">
+				<label id="BotonMenu" for="btn-menu"><img src="img/icono-menu.jpg"> </label>
+				<nav class="menu">
+					<ul id="MenuDesplegable">
+						<li><a href="#"> Inicio </a></li>
+						
+						<li class="submenu"><a href="index.html"> Instalación AirDroid<span class="icon-down-open"> </span></a>
+							<ul>
+								<li><a href="#InstalaciónAirDroid "> Instalación AirDroid </a></li>
+								<li><a href="#ControlarTLF"> Controlar nuestro teléfono con AirDroid</a></li>
+							</ul>
+						</li>
+						
+						<li class="submenu"><a href="SSHServer.html"> SSH Server <span class="icon-down-open"> </span></a>
+							<ul>
+								<li><a href="#InstalaciónSSHServer"> Instalación SSH Server </a></li>
+								<li><a href="#AñadirUsuario"> Añadir usuario y entrar desde Windows</a></li>
+								<li><a href="#CrearCarpeta"> Crear carpeta en SSH Server</a></li>
+							</ul>
+						</li>
+						
+						<li class="submenu"><a href="Juice-SSH Client.html"> Juice-SSH Client <span class="icon-down-open"> </span></a>
+							<ul>
+								<li><a href="#InstalaciónJuice">Instalación y ajustes iniciales </a></li>
+								<li><a href="#CrearCarpetaJuice"> Crear carpeta desde Ubuntu</a></li>
+							</ul>
+						</li>
+						
+						<li class="submenu"><a href="SSH Ubuntu-Android.html"> SSH Ubuntu-Android <span class="icon-down-open"> </span></a>
+							<ul>
+								<li><a href="#CrearCarpetaUbuntu"> Crear una carpeta desde Ubuntu</a></li>
+		
+							</ul>
+						</li>
+						
+						<li class="submenu"><a href="Sftp Ubuntu-Android.html"> Sftp Ubuntu-Android <span class="icon-down-open"> </span></a>
+							<ul>
+								<li><a href="#CrearArchivoUbuntu"> Crear un archivo en Ubuntu y copiarlo al móvil (comando put ) </a></li>
+								<li><a href="#CogerArchivoMovil">Coger un archivo del móvil y pasarlo al ordenador con Ubuntu (comando get)  </a></li>
+							</ul>
+						</li>
+						
+						<li class="submenu"><a href="SFTP Grafico.html"> SFTP gráfico <span class="icon-down-open"> </span></a>
+							<ul>
+								<li><a href="#"> poner un archivo desde el cliente SFTP Android hasta Ubuntu y también copiar un archivo desde Ubuntu hasta Android.</a></li>
+		
+							</ul>
+						</li>
+					
+					</ul>
+				</nav>
+				
+				<!-- script -->
+				<script src="menu.js"></script>
+			</div>
+			
+			<!-- Contenido Pagina -->
+			<h1>SFTP Ubuntu-Android</h1> </br></br>
+			<h1> <a name="CrearArchivoUbuntu">Crear un archivo en Ubuntu y copiarlo al móvil (comando put )</a></h1>
+			<p id="Contenedor">
+				
+				Lo primero que tenemos que hacer es irnos al escritorio y crear el archivo con nuestro nombre
+				</br> <img  id="Ordenador" src="img/Fotos Sftp Ubuntu-Android/1.png " > </br>
+				Después nos vamos a la terminal y accedemos al directorio donde hemos creado el archivo txt 
+				</br> <img  id="Ordenador" src="img/Fotos Sftp Ubuntu-Android/2.png " > </br>
+				Dentro del directorio tenemos que acceder a nuestro teléfono con sftp con el comando sftp-P puerto usuario@ipdispositivomovil
+				</br> <img  id="Ordenador" src="img/Fotos Sftp Ubuntu-Android/3.png " > </br>
+				Una vez dentro comprobamos con un ls las carpetas que tenemos dentro para después poder comprobar que hemos copiado bien la carpeta
+				</br> <img  id="Ordenador" src="img/Fotos Sftp Ubuntu-Android/4.png " > </br>
+				Cuando estemos dentro del teléfono tenemos que acceder a una carpeta a la que tengamos permisos y una vez dentro de la carpeta donde
+				tenemos los permisos de escritura usamos el comando put “put Alejandromovil” y se descargara el archivo en nuestro teléfono 
+				</br> <img  id="Ordenador" src="img/Fotos Sftp Ubuntu-Android/5.png " > </br>
+				Si hacemos un ls podemos comprobar si hemos copiado correctamente el archivo
+				</br> <img  id="Ordenador" src="img/Fotos Sftp Ubuntu-Android/6.png " > </br>
+			</p>
+			
+			<h1><a name="CogerArchivoMovil">Coger un archivo del móvil y pasarlo al ordenador con Ubuntu (comando get)</a></h1>
+			<p id="Contenedor">
+				Lo primero que tenemos que hacer es acceder a nuestro teléfono mediando sftp </br> <img  id="Ordenador" src="img/Fotos Sftp Ubuntu-Android/7.png " > </br>
+				Accedemos a la carpeta donde tenemos permiso de escritura y nos fijamos por ejemplo en la carpeta Desdeubuntu que creamos en un ejercicio anterior
+				</br> <img  id="Ordenador" src="img/Fotos Sftp Ubuntu-Android/8.png " > </br>
+				Si usamos solo el comando get para copiarlo no nos dejará </br> <img  id="Ordenador" src="img/Fotos Sftp Ubuntu-Android/9.png " > </br>
+				Entonces tenemos que usar el comando get, pero con –R para que nos deje copiar el archivo 
+				</br> <img  id="Ordenador" src="img/Fotos Sftp Ubuntu-Android/10.png " > </br>
+				Si salimos de sftp y hacemos un ls en el escritorio podemos comprobar si se ha copiado correctamente
+				</br> <img  id="Ordenador" src="img/Fotos Sftp Ubuntu-Android/11.png " > </br>
+				También podemos comprobarlo si nos vamos al escritorio y nos aparece la carpeta </br> <img  id="Ordenador" src="img/Fotos Sftp Ubuntu-Android/12.png " > </br>
+			</p>
+		</div>
+		<!-- Pie de página -->
+		<footer >
+			<div id="piedepagina">
+				<p id="Direccion">
+					Centro de Formación I.E.S. Rosa Navarro</br>
+					Avenida de Portugal s/n</br>
+					Olula del Río (Almería)</br>
+				</p>
+				
+				<p id="Contacto">
+					<b>Teléfono:</b> 950 63 96 05</br>
+					<b>Fax:</b> 950 63 95 32</br>
+					<b>Web:</b> <a href="www.iesrosanavarro.es"> www.iesrosanavarro.es</a></br>
+					<b>Correo electrónico:</b> <a href="mailto:04003457.edu@juntadeandalucia.es">04003457.edu@juntadeandalucia.es</a>
+				</p>
+				
+			</div>
+		</footer>
+	</body>
+</html>
